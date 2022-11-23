@@ -225,7 +225,7 @@ export function BasicMenu(props: any) {
         }}
       >
         {props.items?.map((item: any, i: any) => (
-          <MenuItem onClick={(e: any) => handleSelect(e, item)}>{item.title}</MenuItem>
+          <MenuItem key={i} onClick={(e: any) => handleSelect(e, item)}>{item.title}</MenuItem>
         ))}
       </Menu>
     </React.Fragment >

@@ -48,10 +48,10 @@ const Transition = React.forwardRef(function Transition(
 export const PreviewReport = (props: any) => {
   return (
     <React.Fragment>
-      <Box sx={{ width: '100%', p:2 }}>
+      <Box sx={{ width: '100%', p: 2 }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          {(props?.reportData?.chartsList || []).map((item: any) => (
-            <Grid item xs={6}>
+          {(props?.reportData?.chartsList || []).map((item: any, i: any) => (
+            <Grid key={i} item xs={6}>
               {/* <RecipeReviewCard /> */}
 
               <Card sx={{}}>
@@ -136,7 +136,7 @@ function a11yProps(index: number) {
 
 export function BasicTabs(props: any) {
   const [value, setValue] = React.useState(0);
-  const [selectedDashboard, setSelectedDashboard] = React.useState(null);
+  const [selectedDashboard, setSelectedDashboard] = React.useState({title: ''});
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
