@@ -44,11 +44,24 @@ const Transition = React.forwardRef(function Transition(
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
+import { savePDF } from '@progress/kendo-react-pdf';
 
 export const PreviewReport = (props: any) => {
+  const bodyRef = React.createRef();
+  const createPdfUtil = (html: any) => {
+    savePDF(html, {
+      paperSize: 'Letter',
+      fileName: 'form.pdf',
+      margin: 3
+    })
+  }
+  const createPdf = () => createPdfUtil(bodyRef.current);
+
   return (
     <React.Fragment>
-      <Box sx={{ width: '100%', p: 2 }}>
+      <Button onClick={createPdf}>Download PDF</Button>
+      
+      <Box ref={bodyRef} sx={{ width: '100%', p: 2 }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           {(props?.reportData?.chartsList || []).map((item: any, i: any) => (
             <Grid key={i} item xs={6}>
@@ -131,7 +144,7 @@ function a11yProps(index: number) {
 
 export function BasicTabs(props: any) {
   const [value, setValue] = React.useState(0);
-  const [selectedDashboard, setSelectedDashboard] = React.useState({title: ''});
+  const [selectedDashboard, setSelectedDashboard] = React.useState({ title: '' });
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
