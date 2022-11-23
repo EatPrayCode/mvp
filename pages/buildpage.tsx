@@ -5,7 +5,6 @@ import AppBar from '@mui/material/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { LeftSectionForm, ChartHolder } from './build';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
@@ -19,6 +18,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { TextField } from '@mui/material';
 import { mockEntry } from '@/mocks/mockpacks';
+import { ChartHolder, LeftSectionForm } from '@/components/build';
 
 
 const drawerWidth = 240;

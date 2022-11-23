@@ -4,7 +4,7 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import { DefaultLayout } from '../layouts';
-import { BasicTabs } from './dashboard';
+import { BasicTabs } from '../components/dashboard';
 import { mockEntry } from '@/mocks/mockpacks';
 
 const Item = styled(Paper)(({ theme }) => ({
