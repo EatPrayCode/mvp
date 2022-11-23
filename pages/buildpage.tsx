@@ -67,12 +67,14 @@ export default function BuildPage() {
   const addChartToDashboard = (dashboard: any, chart: any) => {
 
     const storageEntry: any = localStorage.getItem('assetMVP');
-    const entry: any = storageEntry ? JSON.parse(storageEntry) : mockEntry;
+
+    let entry: any = storageEntry ? JSON.parse(storageEntry) : mockEntry;
+
     const dashboardId = dashboard.id;
 
-    let myArray = entry.dashboards,
+    let myArray = [...entry.dashboards];
 
-      objIndex = myArray.findIndex(((obj: any) => obj.id == dashboardId));
+    const objIndex = myArray.findIndex(((obj: any) => obj.id == dashboardId));
 
     //Log object to Console.
     console.log("Before update: ", myArray[objIndex])
@@ -81,13 +83,21 @@ export default function BuildPage() {
 
     //Log object to console again.
     console.log("After update: ", myArray[objIndex]);
-    debugger;
 
+    const dummy = myArray.map((ele: any) => {
+      const obj = {
+        chartsList: ele.chartsList,
+        id: ele.id,
+        title: ele.title,
+      }
+      return { ...obj };
+    });
 
-    entry.dashboards = myArray;
-    // const entry = entry ? JSON.parse(entry) : mockEntry;
-    localStorage.setItem('assetMVP', JSON.stringify(entry));
+    const newEntry = { dashboards: dummy, reports: [] };
+
+    // localStorage.setItem('assetMVP', JSON.stringify(mockEntry));
   };
+
   const [chartTitle, setChartTitle] = React.useState('DEFAULT');
 
   const handleChange = (event: any) => {

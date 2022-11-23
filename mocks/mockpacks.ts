@@ -194,74 +194,57 @@ export const mockFinancesList: any = [
   },
 ];
 
-export const chartData = {
-  labels: ['Boston', 'Worcester', 'Springfield', 'Lowel', 'Cambridge', 'New Bedford'],
-  datasets: [
-    {
-      label: 'Population',
-      data: [
-        617594,
-        18045,
-        153060,
-        106519,
-        105162,
-        95072
-      ],
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.6)',
-        'rgba(54, 162, 235, 0.6)',
-        'rgba(255, 206, 86, 0.6)',
-        'rgba(75, 192, 192, 0.6)',
-        'rgba(153, 102, 255, 0.6)',
-        'rgba(255, 159, 64, 0.6)',
-        'rgba(255, 99, 132, 0.6)'
-      ]
-    }
-  ],
-};
-
-const chartsList = [{
-  chartTitle: 'Sample Name 1',
-  chartData: chartData,
-  chartType: 'PIE'
-},
-{
-  chartTitle: 'Sample Name 2',
-  chartData: chartData,
-  chartType: 'LINE'
-},
-{
-  chartTitle: 'Sample Name 3',
-  chartData: chartData,
-  chartType: 'TABLE'
-},
-];
+// export const chartData = {
+//   labels: ['Boston', 'Worcester', 'Springfield', 'Lowel', 'Cambridge', 'New Bedford'],
+//   datasets: [
+//     {
+//       label: 'Population',
+//       data: [
+//         617594,
+//         18045,
+//         153060,
+//         106519,
+//         105162,
+//         95072
+//       ],
+//       backgroundColor: [
+//         'rgba(255, 99, 132, 0.6)',
+//         'rgba(54, 162, 235, 0.6)',
+//         'rgba(255, 206, 86, 0.6)',
+//         'rgba(75, 192, 192, 0.6)',
+//         'rgba(153, 102, 255, 0.6)',
+//         'rgba(255, 159, 64, 0.6)',
+//         'rgba(255, 99, 132, 0.6)'
+//       ]
+//     }
+//   ],
+// };
 
 const report = {
   chartTitle: 'Report',
   id: 'Report',
-  chartsList: chartsList
+  chartsList: []
 }
 
 const dashboard1 = {
   title: 'Dashboard1',
   id: 'Dashboard1',
-  chartsList: chartsList
+  chartsList: []
 }
 
 const dashboard2 = {
   title: 'Dashboard2',
   id: 'Dashboard2',
-  chartsList: chartsList
+  chartsList: []
 }
 
 const dashboard3 = {
   title: 'Dashboard3',
   id: 'Dashboard3',
-  chartsList: chartsList
+  chartsList: []
 }
 
 export const mockEntry = {
-  dashboards: [dashboard1, dashboard2, dashboard3],
-  reports: [report]
+  dashboards: [...[], dashboard1, dashboard2, dashboard3],
+  reports: []
 };

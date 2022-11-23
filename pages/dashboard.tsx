@@ -48,12 +48,16 @@ const Transition = React.forwardRef(function Transition(
 export const PreviewReport = (props: any) => {
   return (
     <React.Fragment>
-      <CssBaseline />
-      <Container fixed>
-        {(props?.reportData?.chartsList || []).map((item: any) => (
-          <ChartHolder chartType={item.chartType} chartData={item.chartData} chartTitle={item.chartTitle} />
-        ))}
-      </Container>
+      <Box sx={{ width: '100%' }}>
+        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+          {(props?.reportData?.chartsList || []).map((item: any) => (
+            <Grid item xs={6}>
+              <ChartHolder chartType={item.chartType} chartData={item.chartData} chartTitle={item.chartTitle} />
+            </Grid>
+          ))}
+
+        </Grid>
+      </Box>
     </React.Fragment>
   )
 }
