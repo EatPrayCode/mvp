@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-blue-300;
+  }
+  header {
+    @apply fixed top-0 z-50 flex w-full transition-all;
+  }
+}
+
+header {
+  padding: 0;
+}
+
+@layer components {
+  .headerLink {
+    @apply cursor-pointer text-sm transition duration-[400];
+  }
+  .bannerButton {
+    @apply flex items-center gap-x-2 rounded py-1.5 px-5 text-sm font-semibold transition hover:opacity-75 md:py-2.5 md:px-8 md:text-xl;
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "notificationContent": "<p class='notification-item__content'> <span class='highlight'> Lorem ipsum dolor sit</span> amet consectetur adipisicing elit. Dolores, illum.</p>",
+    "notificationTime": "Just now",
+    "unread": true
+  },
+  {
+    "id": "2",
+    "notificationContent": "<p class='notification-item__content'> <span class='highlight'> Lorem ipsum dolor sit</span> amet consectetur adipisicing elit. Dolores, illum.</p>",
+    "notificationTime": "2 minutes ago",
+    "unread": true
+  },
+  {
+    "id": "3",
+    "notificationContent": "<p class='notification-item__content'> <span class='highlight'> Lorem ipsum dolor sit</span> amet consectetur adipisicing elit. Dolores, illum.</p>",
+    "notificationTime": "5 minutes ago",
+    "unread": false
+  },
+  {
+    "id": "4",
+    "notificationContent": "<p class='notification-item__content'> <span class='highlight'> Lorem ipsum dolor sit</span> amet consectetur adipisicing elit. Dolores, illum.</p>",
+    "notificationTime": "3 days ago",
+    "unread": false
+  },
+  {
+    "id": "5",
+    "notificationContent": "<p class='notification-item__content'> <span class='highlight'> Lorem ipsum dolor sit</span> amet consectetur adipisicing elit. Dolores, illum.</p>",
+    "notificationTime": "2 weeks ago",
+    "unread": false
+  }
+]

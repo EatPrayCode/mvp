@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "productTitle": "Leather bag",
+    "productCategory": "Bag",
+    "productImage": "/assets/img/products/product1.png",
+    "price": 40,
+    "discount": 10,
+    "orderStatus": "completed"
+  },
+  {
+    "id": "2",
+    "productTitle": "Lipstick",
+    "productCategory": "Cosmetics",
+    "productImage": "/assets/img/products/product2.png",
+    "price": 60,
+    "discount": 0,
+    "orderStatus": "cancelled"
+  },
+  {
+    "id": "3",
+    "productTitle": "Sports Shoe",
+    "productCategory": "shoe",
+    "productImage": "/assets/img/products/product3.png",
+    "price": 46,
+    "discount": 10,
+    "orderStatus": "returned"
+  },
+  {
+    "id": "4",
+    "productTitle": "Jogging Shoe",
+    "productCategory": "Shoe",
+    "productImage": "/assets/img/products/product4.png",
+    "price": 10,
+    "discount": 10,
+    "orderStatus": "completed"
+  }
+]

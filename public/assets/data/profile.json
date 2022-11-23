@@ -1,0 +1,21 @@
+{
+  "name": "Nicholas J. Echeverria",
+  "id": "MB 4350",
+  "image": "/assets/img/profile.jpg",
+  "points": {
+    "number": 346,
+    "moneyValue": 40,
+    "currencySymbol": "$"
+  },
+  "level": {
+    "number": 4,
+    "percent": 30
+  },
+  "username": "john007",
+  "phone": "(+1) 223556 66",
+  "email": "demo@mail.com",
+  "shippingAddress": "935-1670 Neque. St. Centennial Delaware 48432",
+  "totalOrder": 25,
+  "toBeShipped": 5,
+  "reviewCount": 10
+}

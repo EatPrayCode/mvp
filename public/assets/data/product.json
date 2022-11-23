@@ -1,0 +1,275 @@
+[
+  {
+    "id": "1",
+    "sku": "asdf123",
+    "name": "Leather Bag",
+    "price": 11.5,
+    "discount": 10,
+    "rating": 3,
+    "saleCount": 54,
+    "wishlistCount": 10,
+    "ratingCount": 5,
+    "category": ["men"],
+    "variation": [
+      {
+        "color": "black",
+        "image": "/assets/img/products/product1.png",
+        "stock": 20
+      },
+      {
+        "color": "violet",
+        "image": "/assets/img/products/product2.png",
+        "stock": 10
+      },
+      {
+        "color": "pink",
+        "image": "/assets/img/products/product3.png",
+        "stock": 5
+      },
+      {
+        "color": "brown",
+        "image": "/assets/img/products/product4.png",
+        "stock": 2
+      }
+    ],
+    "image": ["/assets/img/products/product1.png"],
+    "galleryImage": [
+      "/assets/img/product-slider/product1.png",
+      "/assets/img/product-slider/product2.png",
+      "/assets/img/product-slider/product3.png"
+    ],
+    "shortDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant",
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  },
+  {
+    "id": "2",
+    "sku": "asdf124",
+    "name": "Vanity Bag",
+    "price": 2.45,
+    "discount": 15,
+    "rating": 4,
+    "saleCount": 74,
+    "wishlistCount": 11,
+    "ratingCount": 8,
+    "category": ["women"],
+    "variation": [
+      {
+        "color": "black",
+        "image": "/assets/img/products/product2.png",
+        "stock": 20
+      },
+      {
+        "color": "violet",
+        "image": "/assets/img/products/product3.png",
+        "stock": 10
+      },
+      {
+        "color": "pink",
+        "image": "/assets/img/products/product4.png",
+        "stock": 5
+      },
+      {
+        "color": "brown",
+        "image": "/assets/img/products/product5.png",
+        "stock": 2
+      }
+    ],
+    "image": ["/assets/img/products/product2.png"],
+    "galleryImage": [
+      "/assets/img/product-slider/product2.png",
+      "/assets/img/product-slider/product3.png",
+      "/assets/img/product-slider/product4.png"
+    ],
+    "shortDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant",
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  },
+  {
+    "id": "3",
+    "sku": "asdf125",
+    "name": "Sports Shoe",
+    "price": 22,
+    "discount": 20,
+    "rating": 5,
+    "saleCount": 7,
+    "wishlistCount": 31,
+    "ratingCount": 18,
+    "category": ["men", "women"],
+    "variation": [
+      {
+        "color": "black",
+        "image": "/assets/img/products/product3.png",
+        "stock": 20
+      },
+      {
+        "color": "violet",
+        "image": "/assets/img/products/product4.png",
+        "stock": 10
+      },
+      {
+        "color": "pink",
+        "image": "/assets/img/products/product5.png",
+        "stock": 5
+      },
+      {
+        "color": "brown",
+        "image": "/assets/img/products/product6.png",
+        "stock": 2
+      }
+    ],
+    "image": ["/assets/img/products/product3.png"],
+    "galleryImage": [
+      "/assets/img/product-slider/product3.png",
+      "/assets/img/product-slider/product4.png",
+      "/assets/img/product-slider/product5.png"
+    ],
+    "shortDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant",
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  },
+  {
+    "id": "4",
+    "sku": "asdf126",
+    "name": "Premium Shoe",
+    "price": 32.5,
+    "discount": 5,
+    "rating": 0,
+    "saleCount": 4,
+    "wishlistCount": 16,
+    "ratingCount": 6,
+    "category": ["men", "women"],
+    "stock": 10,
+    "image": ["/assets/img/products/product4.png"],
+    "galleryImage": [
+      "/assets/img/product-slider/product4.png",
+      "/assets/img/product-slider/product5.png",
+      "/assets/img/product-slider/product6.png"
+    ],
+    "shortDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant",
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  },
+  {
+    "id": "5",
+    "sku": "asdf127",
+    "name": "Makeup Box",
+    "price": 12.5,
+    "discount": 15,
+    "rating": 4,
+    "saleCount": 5,
+    "wishlistCount": 12,
+    "ratingCount": 7,
+    "category": ["women"],
+    "stock": 11,
+    "image": ["/assets/img/products/product5.png"],
+    "galleryImage": [
+      "/assets/img/product-slider/product5.png",
+      "/assets/img/product-slider/product6.png",
+      "/assets/img/product-slider/product7.png"
+    ],
+    "shortDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant",
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  },
+  {
+    "id": "6",
+    "sku": "asdf128",
+    "name": "Ear Ring",
+    "price": 2.5,
+    "discount": 15,
+    "rating": 5,
+    "saleCount": 50,
+    "wishlistCount": 22,
+    "ratingCount": 8,
+    "category": ["women"],
+    "stock": 14,
+    "image": ["/assets/img/products/product6.png"],
+    "galleryImage": [
+      "/assets/img/product-slider/product6.png",
+      "/assets/img/product-slider/product7.png",
+      "/assets/img/product-slider/product8.png"
+    ],
+    "shortDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant",
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  },
+  {
+    "id": "7",
+    "sku": "asdf129",
+    "name": "Ear Ring Two",
+    "price": 2.5,
+    "discount": 15,
+    "rating": 5,
+    "saleCount": 50,
+    "wishlistCount": 22,
+    "ratingCount": 8,
+    "category": ["women"],
+    "stock": 14,
+    "image": ["/assets/img/products/product7.png"],
+    "galleryImage": [
+      "/assets/img/product-slider/product7.png",
+      "/assets/img/product-slider/product8.png",
+      "/assets/img/product-slider/product9.png"
+    ],
+    "shortDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant",
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  },
+  {
+    "id": "8",
+    "sku": "asdf130",
+    "name": "Tour Cap",
+    "price": 12,
+    "discount": 15,
+    "rating": 3,
+    "saleCount": 30,
+    "wishlistCount": 2,
+    "ratingCount": 6,
+    "category": ["women"],
+    "stock": 4,
+    "image": ["/assets/img/products/product8.png"],
+    "galleryImage": [
+      "/assets/img/product-slider/product8.png",
+      "/assets/img/product-slider/product9.png",
+      "/assets/img/product-slider/product10.png"
+    ],
+    "shortDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant",
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  },
+  {
+    "id": "9",
+    "sku": "asdf131",
+    "name": "Belt",
+    "price": 14,
+    "discount": 5,
+    "rating": 5,
+    "saleCount": 20,
+    "wishlistCount": 12,
+    "ratingCount": 9,
+    "category": ["men"],
+    "stock": 12,
+    "image": ["/assets/img/products/product9.png"],
+    "galleryImage": [
+      "/assets/img/product-slider/product9.png",
+      "/assets/img/product-slider/product10.png",
+      "/assets/img/product-slider/product1.png"
+    ],
+    "shortDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant",
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  },
+  {
+    "id": "10",
+    "sku": "asdf132",
+    "name": "Hair Clip",
+    "price": 3,
+    "discount": 15,
+    "rating": 2,
+    "saleCount": 20,
+    "wishlistCount": 15,
+    "ratingCount": 4,
+    "category": ["women"],
+    "stock": 14,
+    "image": ["/assets/img/products/product10.png"],
+    "galleryImage": [
+      "/assets/img/product-slider/product10.png",
+      "/assets/img/product-slider/product1.png",
+      "/assets/img/product-slider/product2.png"
+    ],
+    "shortDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant",
+    "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  }
+]
