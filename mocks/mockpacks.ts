@@ -220,9 +220,21 @@ export const mockFinancesList: any = [
 //   ],
 // };
 
-const report = {
-  chartTitle: 'Report',
-  id: 'Report',
+const report1 = {
+  title: 'Report1',
+  id: 'Report1',
+  chartsList: []
+}
+
+const report2 = {
+  title: 'Report2',
+  id: 'Report2',
+  chartsList: []
+}
+
+const report3 = {
+  title: 'Report3',
+  id: 'Report3',
   chartsList: []
 }
 
@@ -244,7 +256,9 @@ const dashboard3 = {
   chartsList: []
 }
 
+
+
 export const mockEntry = {
-  dashboards: [...[], dashboard1, dashboard2, dashboard3],
-  reports: []
+  dashboards: [...[], ...[dashboard1, dashboard2, dashboard3]],
+  reports: [...[], ...[report1, report2, report3]],
 };

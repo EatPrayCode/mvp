@@ -17,7 +17,7 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
 
-import IconButton from '@mui/material/IconButton';
+import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -48,11 +48,33 @@ const Transition = React.forwardRef(function Transition(
 export const PreviewReport = (props: any) => {
   return (
     <React.Fragment>
-      <Box sx={{ width: '100%' }}>
+      <Box sx={{ width: '100%', p:2 }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           {(props?.reportData?.chartsList || []).map((item: any) => (
             <Grid item xs={6}>
-              <ChartHolder chartType={item.chartType} chartData={item.chartData} chartTitle={item.chartTitle} />
+              {/* <RecipeReviewCard /> */}
+
+              <Card sx={{}}>
+                <CardHeader
+                  avatar={
+                    <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                      R
+                    </Avatar>
+                  }
+                  action={
+                    <IconButton aria-label="settings">
+                      <MoreVertIcon />
+                    </IconButton>
+                  }
+                  title={item.chartTitle}
+                  subheader={item.chartType}
+                />
+
+                <CardContent>
+                  <ChartHolder chartType={item.chartType} chartData={item.chartData} chartTitle={item.chartTitle} />
+
+                </CardContent>
+              </Card>
             </Grid>
           ))}
 
@@ -60,6 +82,23 @@ export const PreviewReport = (props: any) => {
       </Box>
     </React.Fragment>
   )
+}
+
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Collapse from '@mui/material/Collapse';
+
+import { red } from '@mui/material/colors';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+
+interface ExpandMoreProps extends IconButtonProps {
+  expand: boolean;
 }
 
 interface TabPanelProps {
@@ -104,6 +143,7 @@ export function BasicTabs(props: any) {
   };
 
   const dashboards: any = props.payload.dashboards;
+  const reports: any = props.payload.reports;
 
   const [open, setOpen] = React.useState(false);
 
@@ -116,6 +156,7 @@ export function BasicTabs(props: any) {
     setOpen(false);
   };
   const dashboardsLength = dashboards.length;
+  const reportsLength = reports.length;
 
 
   return (
@@ -127,7 +168,7 @@ export function BasicTabs(props: any) {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        {dashboardsLength}
+        {/* {dashboardsLength} */}
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
@@ -161,8 +202,41 @@ export function BasicTabs(props: any) {
           </Grid>
         </Grid>
       </TabPanel>
+
       <TabPanel value={value} index={1}>
-        Item Two
+        {/* {reportsLength} */}
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
+            <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
+              Your Dashboards
+            </Typography>
+            <List dense={true}>
+              {reports?.map((item: any, i: any) => (
+
+                <ListItem
+                  key={i}
+                  secondaryAction={
+                    <IconButton edge="end" aria-label="delete">
+                      <VisibilityIcon onClick={(e) => handleClickOpen(e, item)} />
+                    </IconButton>
+                  }
+                >
+                  <ListItemAvatar>
+                    <Avatar>
+                      <FolderIcon />
+                    </Avatar>
+                  </ListItemAvatar>
+                  <ListItemText
+                    primary={item.title}
+                    secondary={'Charts/Tables: ' + item.chartsList.length}
+                  />
+                </ListItem>
+
+              ))}
+
+            </List>
+          </Grid>
+        </Grid>
       </TabPanel>
 
       <Dialog

@@ -5,10 +5,10 @@ export function ChartContainer(props: any) {
     const chartData = props.chartData;
     const chartType = props.chartType;
     const chartTitle = props.chartTitle;
-
+    debugger;
     return (
         <React.Fragment>
-            <div>{chartTitle} : {chartType}</div>
+            {/* <div>{chartTitle} : {chartType}</div> */}
             {chartType === 'BAR' &&
                 <div className="chart">
                     <Bar
@@ -16,7 +16,7 @@ export function ChartContainer(props: any) {
                         options={{
                             title: {
                                 display: true,
-                                text: 'Largest Cities in Massachusetts(Population)',
+                                text: chartTitle,
                                 fontSize: 25
                             },
                             legend: {
@@ -34,7 +34,7 @@ export function ChartContainer(props: any) {
                         options={{
                             title: {
                                 display: true,
-                                text: 'Largest Cities in Massachusetts(Population)',
+                                text: chartTitle,
                                 fontSize: 25
                             },
                             legend: {
@@ -52,7 +52,7 @@ export function ChartContainer(props: any) {
                         options={{
                             title: {
                                 display: true,
-                                text: 'Largest Cities in Massachusetts(Population)',
+                                text: chartTitle,
                                 fontSize: 25
                             },
                             legend: {

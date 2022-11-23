@@ -59,43 +59,32 @@ export default function BuildPage() {
     setchartType(e);
   };
 
-  const handleAddTo = (e: any) => {
+  const handleAddToDashboard = (e: any) => {
     addChartToDashboard(e, { chartType, chartData: currentChartData, chartTitle });
+  };
 
+  const handleAddToReports = (e: any) => {
+    addChartTReports(e, { chartType, chartData: currentChartData, chartTitle });
   };
 
   const addChartToDashboard = (dashboard: any, chart: any) => {
-
     const storageEntry: any = localStorage.getItem('assetMVP');
-
     let entry: any = storageEntry ? JSON.parse(storageEntry) : mockEntry;
-
     const dashboardId = dashboard.id;
-
     let myArray = [...entry.dashboards];
-
     const objIndex = myArray.findIndex(((obj: any) => obj.id == dashboardId));
-
-    //Log object to Console.
-    console.log("Before update: ", myArray[objIndex])
-
     myArray[objIndex].chartsList.push(chart);
+    // localStorage.setItem('assetMVP', JSON.stringify(newEntry));
+  };
 
-    //Log object to console again.
-    console.log("After update: ", myArray[objIndex]);
-
-    const dummy = myArray.map((ele: any) => {
-      const obj = {
-        chartsList: ele.chartsList,
-        id: ele.id,
-        title: ele.title,
-      }
-      return { ...obj };
-    });
-
-    const newEntry = { dashboards: dummy, reports: [] };
-
-    // localStorage.setItem('assetMVP', JSON.stringify(mockEntry));
+  const addChartTReports = (dashboard: any, chart: any) => {
+    const storageEntry: any = localStorage.getItem('assetMVP');
+    let entry: any = storageEntry ? JSON.parse(storageEntry) : mockEntry;
+    const dashboardId = dashboard.id;
+    let myArray = [...entry.reports];
+    const objIndex = myArray.findIndex(((obj: any) => obj.id == dashboardId));
+    myArray[objIndex].chartsList.push(chart);
+    // localStorage.setItem('assetMVP', JSON.stringify(newEntry));
   };
 
   const [chartTitle, setChartTitle] = React.useState('DEFAULT');
@@ -104,6 +93,14 @@ export default function BuildPage() {
     console.log(event.target.value);
     setChartTitle(event.target.value);
   };
+  const entry = mockEntry;
+
+  const dashboardItems = entry.dashboards.map(ele => {
+    return ele;
+  });
+  const reportItems = entry.reports.map(ele => {
+    return ele;
+  });
 
   return (
     <DefaultLayout>
@@ -127,7 +124,8 @@ export default function BuildPage() {
                       onChange={handleChange}
                     />
                   </div>
-                  <BasicMenu handleChange={handleAddTo} />
+                  <BasicMenu name={'Dashboard'} items={dashboardItems} handleChange={handleAddToDashboard} />
+                  <BasicMenu name={'Report'} items={reportItems} handleChange={handleAddToReports} />
                 </ToolBarItem>
               </Grid>
             </Grid>
@@ -206,15 +204,6 @@ export function BasicMenu(props: any) {
     props.handleChange(item);
   };
 
-
-  const entry = mockEntry;
-  const dashboardItems = entry.dashboards.map(ele => {
-    return ele;
-  });
-  const reportItems = entry.reports.map(ele => {
-    return ele;
-  });
-
   return (
     <React.Fragment>
       <Button
@@ -224,7 +213,7 @@ export function BasicMenu(props: any) {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        Add to Dashboard
+        Add to {props.name}
       </Button>
       <Menu
         id="basic-menu"
@@ -235,7 +224,7 @@ export function BasicMenu(props: any) {
           'aria-labelledby': 'basic-button',
         }}
       >
-        {dashboardItems?.map((item: any, i: any) => (
+        {props.items?.map((item: any, i: any) => (
           <MenuItem onClick={(e: any) => handleSelect(e, item)}>{item.title}</MenuItem>
         ))}
       </Menu>
