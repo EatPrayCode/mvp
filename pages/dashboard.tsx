@@ -97,10 +97,6 @@ import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-interface ExpandMoreProps extends IconButtonProps {
-  expand: boolean;
-}
-
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -109,7 +105,6 @@ interface TabPanelProps {
 
 function TabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -158,7 +153,6 @@ export function BasicTabs(props: any) {
   const dashboardsLength = dashboards.length;
   const reportsLength = reports.length;
 
-
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -169,14 +163,13 @@ export function BasicTabs(props: any) {
       </Box>
       <TabPanel value={value} index={0}>
         {/* {dashboardsLength} */}
-        <Grid container spacing={2}>
+        <Grid container spacing={2} >
           <Grid item xs={12} md={6}>
             <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
               Your Dashboards
             </Typography>
             <List dense={true}>
               {dashboards?.map((item: any, i: any) => (
-
                 <ListItem
                   key={i}
                   secondaryAction={
@@ -195,9 +188,7 @@ export function BasicTabs(props: any) {
                     secondary={'Charts/Tables: ' + item.chartsList.length}
                   />
                 </ListItem>
-
               ))}
-
             </List>
           </Grid>
         </Grid>
@@ -208,11 +199,10 @@ export function BasicTabs(props: any) {
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
-              Your Dashboards
+              Your Reports
             </Typography>
             <List dense={true}>
               {reports?.map((item: any, i: any) => (
-
                 <ListItem
                   key={i}
                   secondaryAction={
@@ -231,14 +221,11 @@ export function BasicTabs(props: any) {
                     secondary={'Charts/Tables: ' + item.chartsList.length}
                   />
                 </ListItem>
-
               ))}
-
             </List>
           </Grid>
         </Grid>
       </TabPanel>
-
       <Dialog
         fullScreen
         open={open}
@@ -265,7 +252,6 @@ export function BasicTabs(props: any) {
         </AppBar>
         <PreviewReport reportData={selectedDashboard} />
       </Dialog>
-
     </Box>
   );
 }

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Bar, Line, Pie } from 'react-chartjs-2';
+import BasicTable from './table';
 
 export function ChartContainer(props: any) {
     const chartData = props.chartData;
     const chartType = props.chartType;
     const chartTitle = props.chartTitle;
-    debugger;
     return (
         <React.Fragment>
             {/* <div>{chartTitle} : {chartType}</div> */}
@@ -64,9 +64,7 @@ export function ChartContainer(props: any) {
                 </div>
             }
             {chartType === 'TABLE' &&
-                <div className="chart">
-                    TABLE omes here
-                </div>
+                <BasicTable chartTitle={chartTitle}/>
             }
         </React.Fragment>
     );

@@ -10,9 +10,10 @@ import { mockEntry } from '@/mocks/mockpacks';
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   textAlign: 'center',
+  justifyContent: 'center',
   color: theme.palette.text.secondary,
   height: 100,
-  lineHeight: '60px',
+  lineHeight: '100px',
 }));
 
 export default function Elevation() {
